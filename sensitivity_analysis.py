@@ -18,7 +18,10 @@ def get_vader_sentiment(text):
     Analyzes the sentiment of the input text using VADER.
     Returns the compound score and a description of the sentiment.
     """
+
     # Get the sentiment scores
+    # polarity_scores() from NLTK VADER always returns a Python dictionary with four keys
+    # Example for vs = {'neg': 0.1, 'neu': 0.3, 'pos': 0.6, 'compound': 0.75}
     vs = analyzer.polarity_scores(text)
     compound_score = vs['compound']
 
