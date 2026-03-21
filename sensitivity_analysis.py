@@ -12,7 +12,7 @@ except LookupError:
 analyzer = SentimentIntensityAnalyzer()
 
 
-## --- Function for Sentiment Analysis ---
+# --- Function for Sentiment Analysis ---
 def get_vader_sentiment(text):
     """
     Analyzes the sentiment of the input text using VADER.
@@ -39,14 +39,14 @@ def get_vader_sentiment(text):
     return compound_score, sentiment_label, color_hex, vs
 
 
-## --- Streamlit Frontend ---
+# --- Streamlit Frontend ---
 def main():
     st.set_page_config(page_title="VADER Sentiment Analysis App", layout="centered")
 
     # 📝 Header Section
     st.title("Text Sentiment Analysis with VADER")
     st.markdown(
-        "Enter a piece of text below to perform a simple **VADER** (Valence Aware Dictionary and sEntiment Reasoner) sentiment analysis.")
+        "Enter a piece of text below to perform a simple **VADER** (Valence Aware Dictionary and Sentiment Reasoner) sentiment analysis.")
 
     # 📥 User Input
     user_input = st.text_area(
